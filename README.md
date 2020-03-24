@@ -6,7 +6,7 @@ mnml is a minimalist skin package for [Rainmeter](https://www.rainmeter.net/), a
 
 ## What's in this package?
 
-True to the name, this skin package contains far fewer skins than Illustro or Illustro Pulsar - it's a basic set of skins that suits my needs, and (hopefully) provides a good starting point for others who wish to apply this design to other skins!
+True to the name, this skin package contains fewer skins than Illustro or Illustro Pulsar - it's a minimal set of skins that suits my needs, and (hopefully) provides a good starting point for others who wish to apply this design to other skins!
 
 ### Skins
 - CPU and RAM - Intel
@@ -16,46 +16,51 @@ True to the name, this skin package contains far fewer skins than Illustro or Il
 - D:\
 - E:\
 
-### Plugins
-- MSIAfterburner.dll (32-bit and 64-bit)
-
 ## Installation
 
 ### Prerequisites
 
 - [Rainmeter](https://www.rainmeter.net/)
   - Tested against v4.3.1.3321, but will probably work on newer versions.
-- [MSI Afterburner](https://www.msi.com/page/afterburner)
-  - This is only used for GPU and VRAM usage.  You don't need to install it if you don't plan on using this functionality.
 
-### via `.rmskin` (recommended)
+### Install via .rmskin file (recommended)
 
-- Download the `mnml_<version>.rmskin` file in the `dist` directory of this repository.
-- Run the downloaded `.rmskin` file
+1. Download the `mnml_<version>.rmskin` file in the `dist` directory of this repository.
+1. Run the downloaded `.rmskin` file
 
-### via `git clone`
+### Install via git
 
-- `git clone` this repository into the `C:\Users\<username>\Documents\Rainmeter\Skins` directory
-- Run `git clone git@github.com:eamq/mnml.git`
+1. Clone this repository into `C:\Users\<username>\Documents\Rainmeter\Skins`
 
-### via `.zip` file
+### Install via .zip file
 
-- Go to the `Releases` tab in this repository
-- Expand `Assets` on the most recent release
-- Download `Source code (zip)`
-- Extract the downloaded `.zip` file in the `C:\Users\<username>\Documents\Rainmeter\Skins` directory
+1. Go to the `Releases` tab in this repository
+1. Expand `Assets` on the most recent release
+1. Download `Source code (zip)`
+1. Create a new directory called `mnml` in `C:\Users\<username>\Documents\Rainmeter\Skins`
+1. Extract the downloaded `.zip` file in the new directory
 
 ## Modifying the skin
 
 You will likely need to modify this skin in order to match your system.  Here are some things that you can/should change:
 
 - Processor name/type
-- Number of processor cores/threads (not used currently, will probably add in the future)
 - GPU name/type
+- Network name
 - Amount of VRAM
+- Drive labels
 - Additional drives
 
-You may also wish to change the colors of the CPU and GPU usage graphs to match the AMD red color scheme.  Just note that the colors of the network/storage graphs are complimentary with the Intel blue and NVIDIA green.  I am considering changing these colors to fit well with both color schemes.
+Most variables are located in `@Resources/Variables/Variables.inc`, with the exception of storage drive labels (these are stored in their specific skins).
+
+By default, all graphs will use a neutral color scheme, but Intel, AMD, and NVIDIA colors have been provided if you wish to use them.  Simply modify the `colorCPU` and `colorGPU` variables in `@Resources/Variables/Variables.inc` to point to the desired vendor color variable (`colorIntel`, `colorAmd`, or `colorNvidia`).
+
+Example:
+```toml
+colorCPU = #colorIntel#
+```
+
+If the name of your CPU, GPU, or network causes the skin to expand horizontally, you can adjust the global width of all skins by modifying the `contentWidth` variable.
 
 ## Compatibility
 
@@ -68,10 +73,8 @@ Pull requests are welcome!  I only ask that you bump the version number and gene
 ## Todo list
 
 - Add per-thread CPU bar graphs (oriented vertically, like a graphic equalizer)
-- Write AMD-themed CPU and GPU skins (or come up with a vendor-agnostic color scheme)
-- Come up with a color scheme for network/storage that works with Intel, AMD, and NVIDIA (not needed if going vendor-agnostic)
 - Move from background.png to a native background, while maintaining the margins between skins
-- Find ways to reduce duplication (abstract common values, iterate on lists, show # of procs based on a variable, etc.)
+- Find ways to reduce CPU core duplication (iterate on lists, show # of procs based on a variable, etc.)
 
 ## Resources
 - [Rainmeter skin documetation](https://docs.rainmeter.net/manual/skins/)
