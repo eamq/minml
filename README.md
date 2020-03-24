@@ -4,24 +4,28 @@ mnml is a minimalist skin package for [Rainmeter](https://www.rainmeter.net/), a
 
 ![mnml skin package for Rainmeter](https://raw.githubusercontent.com/eamq/mnml/master/mnml.png)
 
+## Requirements
+
+- [Windows 10, version 1709 or higher](https://docs.microsoft.com/en-us/windows/release-information/status-windows-10-1709)
+- [Rainmeter](https://www.rainmeter.net/)
+  - Tested against v4.3.1.3321, but will probably work on newer versions.
+
 ## What's in this package?
 
 True to the name, this skin package contains fewer skins than Illustro or Illustro Pulsar - it's a minimal set of skins that suits my needs, and (hopefully) provides a good starting point for others who wish to apply this design to other skins!
 
 ### Skins
-- CPU and RAM - Intel
+- CPU and RAM
 - Network
-- GPU - NVIDIA
+- GPU
 - C:\
 - D:\
 - E:\
+- F:\
+- G:\
+- H:\
 
 ## Installation
-
-### Prerequisites
-
-- [Rainmeter](https://www.rainmeter.net/)
-  - Tested against v4.3.1.3321, but will probably work on newer versions.
 
 ### Install via .rmskin file (recommended)
 
@@ -46,37 +50,41 @@ You will likely need to modify this skin in order to match your system.  Here ar
 
 - Processor name/type
 - GPU name/type
-- Network name
 - Amount of VRAM
+- Network name
 - Drive labels
-- Additional drives
 
-Most variables are located in `@Resources/Variables/Variables.inc`, with the exception of storage drive labels (these are stored in their specific skins).
+Most variables are located in `@Resources/Variables/Variables.inc`, with the exception of drive labels (these are stored in their specific skins).
 
-By default, all graphs will use a neutral color scheme, but Intel, AMD, and NVIDIA colors have been provided if you wish to use them.  Simply modify the `colorCPU` and `colorGPU` variables in `@Resources/Variables/Variables.inc` to point to the desired vendor color variable (`colorIntel`, `colorAmd`, or `colorNvidia`).
+### Color schemes
+
+By default, all graphs will use a neutral color scheme, but Intel, AMD, and NVIDIA colors have been provided if you wish to use them.  Simply modify the `colorCPU` and `colorGPU` variables in `@Resources/Variables/Variables.inc` to point to the desired vendor color variable.  For example:
 
 Example:
 ```toml
 colorCPU = #colorIntel#
 ```
 
+### Sizing
+
 If the name of your CPU, GPU, or network causes the skin to expand horizontally, you can adjust the global width of all skins by modifying the `contentWidth` variable.
+
+If you need to adjust the height of a skin, set or change the `containerHeight` variable in that skin.
 
 ## Compatibility
 
-The `.rmskin` package has been built for Windows 10, and tested on Windows 10 (64-bit only).  It _should_ work on other versions of Windows, but your mileage may vary.
+The `.rmskin` package has been built for and tested on Windows 10.  The GPU skin requires Windows 10 v1709 in order to fetch GPU and VRAM usage.
 
 ## Contributing
 
-Pull requests are welcome!  I only ask that you bump the version number and generate a new `.rmskin` file, ensuring that both the 32-bit and 64-bit versions of MSIAfterburner.dll are provided during build.
+Pull requests are welcome!  Please make sure to bump the version number and generate a new `.rmskin` file.
 
 ## Todo list
 
 - Add per-thread CPU bar graphs (oriented vertically, like a graphic equalizer)
-- Move from background.png to a native background, while maintaining the margins between skins
 - Find ways to reduce CPU core duplication (iterate on lists, show # of procs based on a variable, etc.)
+- Find way to include CPU temp while looking awesome
 
 ## Resources
 - [Rainmeter skin documetation](https://docs.rainmeter.net/manual/skins/)
 - [Building `.rmskin` files](https://docs.rainmeter.net/manual/distributing-skins/)
-- [MSIAfterburner.dll](https://forums.guru3d.com/threads/rainmeter-plugin-for-msi-afterburner.319558/)

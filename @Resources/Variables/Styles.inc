@@ -26,3 +26,14 @@ Y = 20r
 W = #contentWidth#
 H = 30
 Container = MeterContainer
+
+[styleGraphSmall]
+BarOrientation = HORIZONTAL
+GraphStart = Right
+SolidColor = #colorGraphBackground#
+Antialias = 1
+X = r
+Y = 20r
+W = #contentWidth#
+H = 20
+Container = MeterContainer
