@@ -2,6 +2,10 @@
 [Variables]
 containerHeight = 74
 
+; ========
+; MEASURES
+; ========
+
 [measureFree]
 Measure = FreeDiskSpace
 Drive = #drive#
@@ -31,7 +35,7 @@ Meter = STRING
 MeterStyle = styleLeftText
 X = #paddingX#
 Y = #paddingY#
-Text = "#driveLabel#"
+Text = #driveLabel#
 LeftMouseUpAction = !Execute ["#drive#\"]
 
 [meterBar]
@@ -47,14 +51,14 @@ MeterStyle = styleLeftText
 MeasureName = measureFree
 X = r
 Y = 4r
-Text = "%1B free"
+Text = %1B free
 NumOfDecimals = 1
-AutoScale = 1
+Autoscale = 1
 LeftMouseUpAction = !Execute ["#drive#\"]
 
 [meterIOGraph]
 Meter = Histogram
-MeterStyle = styleGraphSmall
+MeterStyle = styleGraph
 MeasureName = measureIO
 PrimaryColor = #colorNeutral#
 Autoscale = 1

@@ -1,3 +1,5 @@
+; Requires Meters.inc for MeterContainer
+
 [styleLeftText]
 StringAlign = LEFT
 FontColor = #colorText#
@@ -34,10 +36,10 @@ Antialias = 1
 X = r
 Y = 20r
 W = #contentWidth#
-H = 30
+H = 20
 Container = MeterContainer
 
-[styleGraphSmall]
+[styleGraphLarge]
 BarOrientation = HORIZONTAL
 GraphStart = Right
 SolidColor = #colorGraphBackground#
@@ -45,5 +47,5 @@ Antialias = 1
 X = r
 Y = 20r
 W = #contentWidth#
-H = 20
+H = 30
 Container = MeterContainer

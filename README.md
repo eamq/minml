@@ -62,7 +62,7 @@ Most variables are located in `@Resources/Variables/Variables.inc`, with the exc
 By default, all graphs will use a neutral color scheme, but Intel, AMD, and NVIDIA colors have been provided if you wish to use them.  Simply modify the `colorCPU` and `colorGPU` variables in `@Resources/Variables/Variables.inc` to point to the desired vendor color variable.  For example:
 
 Example:
-```toml
+```
 colorCPU = #colorIntel#
 ```
 
