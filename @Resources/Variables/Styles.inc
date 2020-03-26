@@ -7,13 +7,23 @@ AntiAlias = 1
 Container = MeterContainer
 
 [styleBar]
-BarColor = #colorBar#
+BarOrientation = HORIZONTAL
 BarColor = #colorBar#
 SolidColor = #colorGraphBackground#
 X = r
-Y = 36r
+Y = r
 W = #contentWidth#
 H = 3
+Container = MeterContainer
+
+[styleBarVertical]
+BarOrientation = VERTICAL
+BarColor = #colorCPU#
+SolidColor = #colorGraphBackground#
+X = r
+Y = r
+W = #barWidth#
+H = 20
 Container = MeterContainer
 
 [styleGraph]

@@ -1,6 +1,6 @@
 ; Template for a storage drive
 [Variables]
-containerHeight = 84
+containerHeight = 74
 
 [measureFree]
 Measure = FreeDiskSpace
@@ -38,7 +38,6 @@ LeftMouseUpAction = !Execute ["#drive#\"]
 Meter = Bar
 MeasureName = measureUsed
 MeterStyle = styleBar
-BarOrientation = HORIZONTAL
 Y = 19r
 LeftMouseUpAction = !Execute ["#drive#\"]
 
@@ -55,8 +54,9 @@ LeftMouseUpAction = !Execute ["#drive#\"]
 
 [meterIOGraph]
 Meter = Histogram
-MeterStyle = styleGraph
+MeterStyle = styleGraphSmall
 MeasureName = measureIO
 PrimaryColor = #colorNeutral#
 Autoscale = 1
 LeftMouseUpAction = !Execute ["#drive#\"]
+Y = 20r

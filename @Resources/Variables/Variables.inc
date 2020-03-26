@@ -5,7 +5,7 @@
 
 fontName = Segoe UI
 textSize = 9
-colorBackground = 0, 0, 0, 170
+colorBackground = 0, 0, 0, 175
 colorBar = 255, 140, 0, 200
 colorText = 255, 255, 255, 200
 colorGraphBackground = 255, 255, 255, 15
@@ -23,12 +23,14 @@ colorGPU = #colorNeutral#
 containerHeight = 70
 
 ; this controls the overall width of the skin
-contentWidth = 103
+contentWidth = 112
 
 marginX = 7
 marginY = 6
 paddingX = 14
 paddingY = 11
+
+barWidth = 7
 
 ; ============
 ; CPU/RAM info
