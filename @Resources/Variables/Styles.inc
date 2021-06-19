@@ -1,51 +1,45 @@
-; Requires Meters.inc for MeterContainer
-
-[styleLeftText]
-StringAlign = LEFT
-FontColor = #colorText#
-FontFace = #fontName#
-FontSize = #textSize#
+[StyleText]
+FontColor = #Text.color#
+FontFace = #Text.font#
+FontSize = #Text.size#
 AntiAlias = 1
+X = (#Spacing.content.x# + 1)
 Container = MeterContainer
 
-[styleBar]
-BarOrientation = HORIZONTAL
-BarColor = #colorBar#
-SolidColor = #colorGraphBackground#
-X = r
-Y = r
-W = #contentWidth#
-H = 3
+[StyleTextTitle]
+Y = #Spacing.content.y#r
+
+[StyleBar]
+BarOrientation = Horizontal
+BarColor = #Color.graph.bar#
+SolidColor = #Color.graph.background#
+X = #Spacing.content.x#
+W = #Spacing.content.width#
+H = #Spacing.graph.bar.height#
 Container = MeterContainer
 
-[styleBarVertical]
-BarOrientation = VERTICAL
-BarColor = #colorCPU#
-SolidColor = #colorGraphBackground#
-X = r
-Y = r
-W = #barWidth#
-H = 20
-Container = MeterContainer
-
-[styleGraph]
-BarOrientation = HORIZONTAL
+[StyleGraph]
+BarOrientation = Horizontal
 GraphStart = Right
-SolidColor = #colorGraphBackground#
+SolidColor = #Color.graph.background#
 Antialias = 1
-X = r
-Y = 20r
-W = #contentWidth#
-H = 20
+X = #Spacing.content.x#
+W = #Spacing.content.width#
+H = #Spacing.graph.height#
 Container = MeterContainer
 
-[styleGraphLarge]
-BarOrientation = HORIZONTAL
-GraphStart = Right
-SolidColor = #colorGraphBackground#
-Antialias = 1
-X = r
-Y = 20r
-W = #contentWidth#
-H = 30
-Container = MeterContainer
+[StyleGraphBorder]
+Shape = Rectangle #Spacing.content.x#, r, #Spacing.content.width#, #Spacing.graph.height#, | StrokeWidth #Spacing.border.width# | StrokeColor #Color.graph.border# | FillColor #Color.transparent#
+; Container = MeterContainer
+
+[StylePostBar]
+Y = (#Spacing.graph.bar.height# + #Spacing.padding.post.bar#)r
+
+[StylePostGraph]
+Y = (#Spacing.graph.height# + #Spacing.padding.post.histogram#)r
+
+[StylePostText]
+Y = (#Text.size# + #Spacing.padding.post.text#)r
+
+[StylePostTextTitle]
+Y = (#Text.title.size# + #Spacing.padding.post.text#)r

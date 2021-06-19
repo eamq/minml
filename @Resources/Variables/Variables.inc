@@ -1,51 +1,37 @@
 [Variables]
 ; ==================
-; UI style variables
+; UI Style variables
 ; ==================
+; TODO docs: namespaces
 
-fontName = Segoe UI
-textSize = 9
-colorBackground = 0, 0, 0, 175
-colorBar = 255, 140, 0, 200
-colorText = 255, 255, 255, 200
-colorGraphBackground = 255, 255, 255, 15
+Text.font = Segoe UI
+Text.size = 9
 
-colorNeutral = 200, 200, 200, 150
-colorIntel = 0, 113, 197, 150  ; #0071C5
-colorNvidia = 118, 185, 0, 150 ; #76B900
-colorAmd = 221, 0, 49, 150     ; #DD0031
+Spacing.border.width = 1
+; Adjust width of all skins here (content will scale to fit)
+Spacing.content.width = 125
+Spacing.content.x = (#Spacing.margin.horizontal# + #Spacing.padding.horizontal#)
+Spacing.content.y = (#Spacing.margin.vertical# + #Spacing.padding.vertical#)
+Spacing.graph.height = 30
+Spacing.graph.bar.height = 3
+Spacing.margin.horizontal = 6
+Spacing.margin.vertical = 6
+Spacing.padding.horizontal = 6
+Spacing.padding.vertical = 6
+Spacing.padding.post.bar = 3
+Spacing.padding.post.histogram = 6
+Spacing.padding.post.text = 12
+; Override window height as needed in each skin (content will NOT scale to fit)
+; This default works for title + graph + bar
+Spacing.window.height = 72
 
-; To use Intel/AMD/NVIDIA colors, set these to the appropriate variable names (listed above)
-colorCPU = #colorNeutral#
-colorGPU = #colorNeutral#
-
-; default container height, override in specific skins
-containerHeight = 70
-
-; this controls the overall width of the skin
-contentWidth = 112
-
-marginX = 7
-marginY = 6
-paddingX = 14
-paddingY = 11
-
-barWidth = 7
-
-; ============
-; CPU/RAM info
-; ============
-
-CPUName = Intel Core i9-9900K
-
-; ============
-; Network info
-; ============
-networkName = Ethernet
-
-; ========
-; GPU info
-; ========
-
-gpuName = NVIDIA RTX 2080 Ti
-vramInBytes = 12188647424‬ ; 11GB
+Color.background = 0, 0, 0, 200
+Color.brand.intel = 0, 113, 197, 150  ; #0071C5
+Color.brand.nvidia = 118, 185, 0, 150 ; #76B900
+Color.brand.amd = 221, 0, 49, 150     ; #DD0031
+Color.graph.bar = 255, 140, 0, 200
+Color.graph.border = 255, 255, 255, 200
+Color.graph.histogram = 200, 200, 200, 128
+Color.graph.background = 32, 32, 32, 96
+Color.text = 255, 255, 255, 200
+Color.transparent = 0, 0, 0, 0
