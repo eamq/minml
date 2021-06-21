@@ -30,7 +30,6 @@ Container = MeterContainer
 
 [StyleGraphBorder]
 Shape = Rectangle #Spacing.content.x#, r, #Spacing.content.width#, #Spacing.graph.height#, | StrokeWidth #Spacing.border.width# | StrokeColor #Color.graph.border# | FillColor #Color.transparent#
-; Container = MeterContainer
 
 [StylePostBar]
 Y = (#Spacing.graph.bar.height# + #Spacing.padding.post.bar#)r

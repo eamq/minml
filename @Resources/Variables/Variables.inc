@@ -1,7 +1,4 @@
 [Variables]
-; ==================
-; UI Style variables
-; ==================
 ; TODO docs: namespaces
 
 Text.font = Segoe UI

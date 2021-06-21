@@ -1,13 +1,13 @@
 # minml
 
-minml is a minimalist skin package for [Rainmeter](https://www.rainMeter.net/), a desktop customization tool for Windows.  It's based on Illustro by poiru and Illustro Pulsar by Pul53dr1v3r.
+minml is a minimalist skin package for [Rainmeter](https://www.rainmeter.net/), a desktop customization tool for Windows.  It's based on Illustro by poiru and Illustro Pulsar by Pul53dr1v3r.
 
 ![minml skin package for Rainmeter](https://raw.githubusercontent.com/eamq/minml/master/minml.png)
 
 ## Requirements
 
 - [Windows 10, version 1709 or higher](https://docs.microsoft.com/en-us/windows/release-information/status-windows-10-1709)
-- [Rainmeter](https://www.rainMeter.net/)
+- [Rainmeter](https://www.rainmeter.net/)
   - Tested against v4.3.1.3321, but will probably work on newer versions.
 
 ## What's in this package?
@@ -85,5 +85,5 @@ Pull requests are welcome! Please make sure to bump the version number and gener
 - Find way to include CPU temp while looking awesome
 
 ## Resources
-- [Rainmeter skin documetation](https://docs.rainMeter.net/manual/skins/)
-- [Building `.rmskin` files](https://docs.rainMeter.net/manual/distributing-skins/)
+- [Rainmeter skin documetation](https://docs.rainmeter.net/manual/skins/)
+- [Building `.rmskin` files](https://docs.rainmeter.net/manual/distributing-skins/)
