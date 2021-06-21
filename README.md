@@ -59,36 +59,29 @@ Most variables are located in `@Resources/Variables/Variables.inc`, with the exc
 
 ### Color schemes
 
-By default, all graphs will use a neutral color scheme, but Intel, AMD, and NVIDIA colors have been provided if you wish to use them.  Simply modify the `colorCPU` and `colorGPU` variables in `@Resources/Variables/Variables.inc` to point to the desired vendor color variable.  For example:
+By default, all graphs will use a neutral color scheme, but Intel, AMD, and NVIDIA colors have been provided if you wish to use them.  Simply modify the `colorCPU` and `GPU.color.graph` variables in `@Resources/Variables/Variables.inc` to point to the desired vendor color variable.  For example:
 
 Example:
 ```
-colorCPU = #colorIntel#
+colorCPU = #Color.brand.intel#
 ```
 
 ### Sizing
 
-If the name of your CPU, GPU, or network causes the skin to expand horizontally, you can adjust the global width of all skins by modifying the `contentWidth` variable.
+If the name of your CPU, GPU, or network causes the skin to expand horizontally, you can adjust the global width of all skins by modifying the `Spacing.content.width` variable.
 
-If you need to adjust the height of a skin, set or change the `containerHeight` variable in that skin.
-
-### Number of CPU cores/threads
-
-The CPU/RAM skin defaults to 16 cores.  If you have more or fewer cores than this, you'll need to add/remove measures and meters in the `CPU and RAM` skin, and adjust the `barWidth` value in `@Resources/Variables/Variables.inc`.  This will likely require you to adjust the overall width of the skins (via the `contentWidth` variable) to get a pixel-perfect match with the modified per-core bar graph.
-
-(It would be really cool if we could just provide the number of cores and let the skin calculate the widths for us :thinking:)
+If you need to adjust the height of a skin, set or change the `Spacing.window.height` variable in that skin.
 
 ## Compatibility
 
-The `.rmskin` package has been built for and tested on Windows 10.  The GPU skin requires Windows 10 v1709 in order to fetch GPU and VRAM usage.
+The `.rmskin` package has been built for and tested on Windows 10. The GPU skin requires Windows 10 v1709 in order to fetch GPU and VRAM usage.
 
 ## Contributing
 
-Pull requests are welcome!  Please make sure to bump the version number and generate a new `.rmskin` file.
+Pull requests are welcome! Please make sure to bump the version number and generate a new `.rmskin` file.
 
 ## Todo list
 
-- Find ways to reduce CPU core duplication (iterate on lists, show # of procs based on a variable, etc.)
 - Find way to include CPU temp while looking awesome
 
 ## Resources

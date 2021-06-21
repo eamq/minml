@@ -1,6 +1,6 @@
 [Rainmeter]
 BackgroundMode = 1
 BackgroundMargins = 6, 6, 6, 6
-SolidColor = #colorBackground#
+SolidColor = #Color.background#
 AccurateText = 1
 DynamicWindowSize = 1
